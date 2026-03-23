@@ -1,5 +1,5 @@
 # Ex.No: 01A PLOT A TIME SERIES DATA
-###  Date: 
+###  Date: 02/02/2026
 ## Reg No: 212224240053
 
 # AIM:
@@ -16,43 +16,44 @@ To Develop a python program to Plot a time series data (population/ market price
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df=pd.read_csv('/content/price_of_healthy_diet_clean.csv')
+df=pd.read_csv('/content/Tesla Dataset.csv')
 df.shape
 
 df1=df.head(100)
 df1
 ```
 
-<img width="1305" height="327" alt="image" src="https://github.com/user-attachments/assets/3f6c3227-b925-4b70-8f7f-9a9e18cac44f" />
+<img width="743" height="510" alt="image" src="https://github.com/user-attachments/assets/93728eaf-d674-40df-843d-51196ac5d22d" />
 
 ```
 df.info()
 ```
 
-<img width="699" height="400" alt="image" src="https://github.com/user-attachments/assets/a351c1cb-9f6c-408e-94db-5698df835124" />
+<img width="403" height="311" alt="image" src="https://github.com/user-attachments/assets/c1508b39-9ebd-4f6b-ad24-29a269562dde" />
 
 ```
 df.describe()
 ```
 
-<img width="1272" height="293" alt="image" src="https://github.com/user-attachments/assets/685b5a15-590e-486b-9701-ceee6507768a" />
+<img width="808" height="358" alt="image" src="https://github.com/user-attachments/assets/a2dead90-9979-4815-9118-deee1aaaafc5" />
 
 ```
-x=df1['year']
-y=df1['cost_healthy_diet_ppp_usd']
+x=df1['Date']
+y=df1['Open']
 
 plt.figure(figsize=(10,6))
 plt.bar(x,y)
 plt.grid(True)
-plt.title('year vs cost_healthy_diet_ppp_usd')
-plt.xlabel('year')
-plt.ylabel('cost_healthy_diet_ppp_usd')
+plt.title('Date vs Open')
+plt.xlabel('Date')
+plt.ylabel('Open')
 plt.show()
 ```
 
+
 # OUTPUT:
 
-<img width="1027" height="673" alt="image" src="https://github.com/user-attachments/assets/208ad915-c982-45a3-9198-18339eb6e05b" />
+<img width="1065" height="680" alt="image" src="https://github.com/user-attachments/assets/febfab0b-3b72-4d03-ad0f-79b252945f56" />
 
 
 
